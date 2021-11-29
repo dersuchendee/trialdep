@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Manufacturers</title>
+	</head>
+	<body>
+		<h1>Manufacturer: {{manufacturer.get_brand()}}</h1>
+		<ul>
+			{% for model in manufacturer.get_all_models() %}
+			<li>
+				<b>{{model.get_model_name()}}</b>
+				<ul>
+					{% for characteristic in model.get_characteristics() %}
+					<li>{{characteristic.get_meaningful_value()}}</li>
+					{% endfor %}
+				</ul>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

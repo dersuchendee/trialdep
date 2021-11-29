@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>Manufacturers</title>
+	</head>
+	<body>
+		<h1>Manufacturers</h1>
+		<ul>
+			{% for key, val in registry.items() %}
+			<li><a href="./manufacturer?brand={{key}}">{{key}}</a></li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
